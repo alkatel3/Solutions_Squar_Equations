@@ -22,23 +22,11 @@ namespace SolutionsSquarEquations
                     }
                 }
                 catch
-                {
-                    Console.WriteLine("It isn't corect");
-                }
-            }
-            if (NumberMode == 1)
-            {
-                ClassMode = new OnLineMode();
-            }
-            else if (NumberMode == 2)
-            {
-                ClassMode = new OffLineMode();
-            }
-            else
-            {
-                return;
-            }
-            ClassMode?.ReadData();
+                {sssssssssssssssfgfdv 
+                        srfdzdf
+                        zcxeeeeeeeeeeee
+                        seeeeeeeee
+                        dddddddddzzzzzzzwd
             ClassMode?.SolutionEquations();
         }
     }
