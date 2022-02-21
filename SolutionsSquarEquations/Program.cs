@@ -25,8 +25,8 @@ namespace SolutionsSquarEquations
             //    }
             //var n = new Mode(1, 5, -6);
             //n.SolutionEquations();
-            var a = new OnLineMode();
-            a.ReadDate();
+            var a = new OffLineMode();
+            a.ReadData();
             a.SolutionEquations();
 
         }

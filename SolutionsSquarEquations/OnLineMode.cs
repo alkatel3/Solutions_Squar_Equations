@@ -4,7 +4,7 @@ namespace SolutionsSquarEquations
 {
     class OnLineMode:Mode
     {
-        public override void ReadDate()
+        public override void ReadData()
         {
             while (A == 0 || Double.IsNaN(A))
             {

@@ -13,7 +13,7 @@ namespace SolutionsSquarEquations
         //    C = c;
         //    Console.WriteLine($"{A}*x^2+{B}*x+{C}=0");
         //}
-        public virtual void ReadDate()
+        public virtual void ReadData()
         {
             A = 1;
             B = 1;
@@ -25,17 +25,22 @@ namespace SolutionsSquarEquations
             double D = B * B - 4 * A * C;
             if (D < 0)
             {
-                Console.WriteLine("1");
+                Console.WriteLine("This example doesn't have root:");
+                return;
+            }
+            else if (D == 0)
+            {
+                Console.WriteLine("This example has 1 root:");
                 X1 = -B / (2 * A);
                 Console.WriteLine(X1);
-        }
+            }
             else
             {
-                Console.WriteLine("2");
+                Console.WriteLine("This example has 2 root:");
                 X1 = (-B + Math.Sqrt(D)) / 2 * A;
                 X2 = (-B - Math.Sqrt(D)) / 2 * A;
                 Console.WriteLine(X1 + "\n" + X2);
             }
-        }
+        } 
     }
 }
