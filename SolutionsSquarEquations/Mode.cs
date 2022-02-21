@@ -6,13 +6,6 @@ namespace SolutionsSquarEquations
     {
         protected double A = Double.NaN, B = Double.NaN, C = Double.NaN;
         double X1, X2;
-        //public Mode(double a, double b, double c)
-        //{
-        //    A = a;
-        //    B = b;
-        //    C = c;
-        //    Console.WriteLine($"{A}*x^2+{B}*x+{C}=0");
-        //}
         public virtual void ReadData()
         {
             A = 1;
@@ -41,6 +34,6 @@ namespace SolutionsSquarEquations
                 X2 = (-B - Math.Sqrt(D)) / 2 * A;
                 Console.WriteLine(X1 + "\n" + X2);
             }
-        } 
+        }
     }
 }

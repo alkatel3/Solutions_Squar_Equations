@@ -1,34 +1,45 @@
 ﻿using System;
-
 namespace SolutionsSquarEquations
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //    byte mode = 3;
-            //    while (mode != 0)
-            //    {
-            //        Console.WriteLine( "How do you want to work:\n1. online (click 1)\n2. offline (click 2)");
-            //        try
-            //        {
-            //            mode = Byte.Parse(Console.ReadLine());
-            //            if (mode != 1 && mode != 2)
-            //            {
-            //                throw new FormatException();
-            //            }
-            //        }
-            //        catch
-            //        {
-            //            Console.WriteLine("It isn't corect");
-            //        }
-            //    }
-            //var n = new Mode(1, 5, -6);
-            //n.SolutionEquations();
-            var a = new OffLineMode();
-            a.ReadData();
-            a.SolutionEquations();
-
+            byte? NumberMode = null;
+            Mode ClassMode;
+            while (NumberMode == null)
+            {
+                Console.WriteLine("How do you want to work:\n" +
+                    "1. online (click 1)\n" +
+                    "2. offline (click 2)\n" +
+                    "0. Exit (click 0)");
+                try
+                {
+                    NumberMode = Byte.Parse(Console.ReadLine());
+                    if (NumberMode != 1 && NumberMode != 2 && NumberMode != 0)
+                    {
+                        throw new FormatException();
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("It isn't corect");
+                }
+            }
+            if (NumberMode == 1)
+            {
+                ClassMode = new OnLineMode();
+            }
+            else if (NumberMode == 2)
+            {
+                ClassMode = new OffLineMode();
+            }
+            else
+            {
+                return;
+            }
+            ClassMode?.ReadData();
+            ClassMode?.SolutionEquations();
         }
     }
 }
